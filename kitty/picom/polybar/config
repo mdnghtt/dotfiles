@@ -20,18 +20,18 @@
 background = ${xrdb:background:#222}
 #background = #24283b
 #background-alt = #bf1e1e1e
-foreground = ${xrdb:color7:#222}
+foreground = ${xrdb:foreground:#222}
 #foreground = #ffffff
 foreground-alt = #ffffff
 primary = #1b9fc6
 secondary = #ffffff
 alert = #bd2c40
 
-[bar/center]
+[bar/left]
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 16%
 height = 40
-offset-x = 42%
+offset-x = 1%
 offset-y = 0.5%
 radius = 0.0 
 fixed-center = true
@@ -85,11 +85,11 @@ cursor-click = pointer
 cursor-scroll = ns-resize
 
 
-[bar/left]
+[bar/center]
 ;monitor = ${env:MONITOR:HDMI-1}
-width = 16%
+width = 20%
 height = 40
-offset-x = 1%
+offset-x = 41%
 offset-y = 0.5%
 radius = 0.0 
 fixed-center = true
@@ -109,18 +109,18 @@ padding-right = 2
 module-margin-left = 2 
 module-margin-right = 2
 
-font-0 = "SF Pro Display:style=Medium:pixelsize=14;3"
-font-1 = Jet Nerd Font:style=Medium:pixelsize=15;3
-font-2 = Font Awesome 5 Solid:pixelsize=14;2
-font-3 = unifont:fontformat=truetype:size=14:antialias=false;2
-font-4 = "siji:style=Regular:pixelsize=24;2"
-font-5 = "Material\-Design\-Iconic\-Font:style=Design-Iconic-Font:pixelsize=15;3"
-font-6 = Font Awesome 5 Free:pixelsize=14;2
-font-7 = Font Awesome 5 Brands:pixelsize=14;2
+font-0 = "JetBrainsMono Nerd Font:style=Regular:pixelsize=15;3"
+# font-1 = Font Awesome 5 Brands Regular:style=Regular:pixelsize=12;2
+font-4 = "Material\-Design\-Iconic\-Font:style=Design-Iconic-Font:pixelsize=15;3"
+font-2 = unifont:fontformat=truetype:size=14:antialias=false;2
+font-3 = "siji:style=Regular:pixelsize=24;2"
+font-1 = Font Awesome 5 Free:pixelsize=12;2
+font-5 = Font Awesome 5 Free Solid:pixelsize=12;2
+font-6 = Font Awesome 5 Brands:pixelsize=12;2
 #font-3= "MaterialIcons:style:Regular:pixelsize=12;2"
 #font-7 = Material Design Iconic Font:style=Design-Iconic-Font:pixelsize=12;2
 modules-left = 
-modules-center = date
+modules-center = xwindow
 modules-right =
 
 separator = 
@@ -144,12 +144,12 @@ cursor-scroll = ns-resize
 
 [bar/right]
 ;monitor = ${env:MONITOR:HDMI-1}
-width = 21%
+width = 16%
 height = 40
-offset-x = 78%
+offset-x = 83%
 offset-y = 0.5%
 radius = 0.0 
-fixed-center = true
+fixed-center = false
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -160,24 +160,25 @@ line-color = #00564d
 border-size = 0
 border-color = #0D00564d
 
-padding-left = 0
-padding-right = 2
+padding-left = 1
+padding-right = 1
 
 module-margin-left = 1 
 module-margin-right = 1
 
-font-0 = "JetBrainsMono Nerd Font:style=Regular:pixelsize=17;3"
-# font-1 = Font Awesome 5 Brands Regular:style=Regular:pixelsize=17;2
+font-0 = "JetBrainsMono Nerd Font:style=Regular:pixelsize=15;3"
+# font-1 = Font Awesome 5 Brands Regular:style=Regular:pixelsize=12;2
 font-4 = "Material\-Design\-Iconic\-Font:style=Design-Iconic-Font:pixelsize=15;3"
 font-2 = unifont:fontformat=truetype:size=14:antialias=false;2
 font-3 = "siji:style=Regular:pixelsize=24;2"
-font-1 = Font Awesome 5 Free:pixelsize=17;2
-font-5 = Font Awesome 5 Free Solid:pixelsize=15;3
-font-6 = Font Awesome 5 Brands:pixelsize=17;2
+font-1 = Font Awesome 5 Free:pixelsize=12;2
+font-5 = Font Awesome 5 Free Solid:pixelsize=12;2
+font-6 = Font Awesome 5 Brands:pixelsize=12;2
 #font-3= "MaterialIcons:style:Regular:pixelsize=12;2"
 #font-7 = Material Design Iconic Font:style=Design-Iconic-Font:pixelsize=12;2
-modules-left = alsa
-modules-right = mem2 
+modules-left = 
+modules-center = date 
+#modules-right = datecustom
 
 separator = 
 tray-position = none
@@ -197,6 +198,15 @@ wm-restack = bspwm
 
 cursor-click = pointer
 cursor-scroll = ns-resize
+
+[module/datecustom]
+type = custom/script
+exec = ~/.local/bin/clock
+interval = 1
+format = <label>
+label = %output%
+format-foreground = #ffffff
+
 
 [module/xwindow]
 type = internal/xwindow
@@ -259,10 +269,9 @@ label-urgent = %index%!
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 2
 
-label-empty = ""
-label-empty-foreground = ${xrdb:color0:#222}
-label-empty-padding = 2
-#label-empty-foreground = #E8E1D9
+label-empty = ""
+#label-empty-foreground = #c0caf5
+label-empty-padding = 0
 
 ; Separator in between workspaces
 ; label-separator = |
@@ -416,17 +425,17 @@ type = internal/date
 interval = 1
 format-foreground = ${colors.foreground}
 
-date = " %Y-%m-%d "
+date = " %Y-%m-%d"
 date-alt = " %Y-%m-%d"
 
-time = "         %I:%M %p"
+time = %I:%M%p
 time-alt = %H:%M:%S
 
-format-prefix = "   " 
+format-prefix = " " 
 format-prefix-foreground = ${colors.foreground}
 #format-underline = #F2C3F7
 format-background = 
-format-padding = 2
+format-padding = 1
 
 label = %date% %time%
 
@@ -467,35 +476,34 @@ label-muted-padding = 1
 #bar-volume-indicator-underline = #B6F4B5
 #bar-volume-empty-foreground = ${colors.foreground-alt}
 
+
 [module/alsa]
 type = internal/alsa
-format-volume = <label-volume> <bar-volume>
-label-volume = " "
-label-volume-foreground = ${colors.foreground}
-format-muted-foreground = ${colors.foreground}
-label-muted =" ﳌ  Muted"
 
-format-muted-padding = 1
+format-volume = <label-volume> <bar-volume>
+label-volume = VOL
+label-volume-foreground = ${root.foreground}
+
+format-muted-prefix = " "
+format-muted-foreground = ${colors.foreground-alt}
+label-muted = sound muted
 
 bar-volume-width = 10
-bar-volume-foreground-0 = ${xrdb:color6:#222}
-bar-volume-foreground-1 = ${xrdb:color6:#222}
-bar-volume-foreground-2 = ${xrdb:color6:#222}
-bar-volume-foreground-3 = ${xrdb:color6:#222}
-bar-volume-foreground-4 = ${xrdb:color6:#222}
-bar-volume-foreground-5 = ${xrdb:color6:#222}
-bar-volume-foreground-6 = ${xrdb:color6:#222}
+bar-volume-foreground-0 = #55aa55
+bar-volume-foreground-1 = #55aa55
+bar-volume-foreground-2 = #55aa55
+bar-volume-foreground-3 = #55aa55
+bar-volume-foreground-4 = #55aa55
+bar-volume-foreground-5 = #f5a70a
+bar-volume-foreground-6 = #ff5555
 bar-volume-gradient = false
-bar-volume-indicator = 
-bar-volume-indicator-foreground = ${xrdb:color6:#222} 
+bar-volume-indicator = |
 bar-volume-indicator-font = 2
-bar-volume-fill = "━" 
-bar-volume-fill-foreground = ${xrdb:color6:#222}
+bar-volume-fill = ─
 bar-volume-fill-font = 2
-bar-volume-empty = "━"
+bar-volume-empty = ─
 bar-volume-empty-font = 2
-bar-volume-empty-foreground = ${xrdb:color0:#222}
-format-volume-padding = 2
+bar-volume-empty-foreground = ${colors.foreground-alt}
 
 [module/battery]
 type = internal/battery
@@ -587,20 +595,4 @@ margin-top = 5
 margin-bottom = 5
 
 ; vim:ft=dosini
-[module/mem2]
-type = internal/memory
-format = <label> <bar-used>
-label = "" 
-label-padding = 1
-bar-used-width = 10
-bar-used-foreground-0 = ${xrdb:color6:#222}
-bar-used-foreground-1 = ${xrdb:color6:#222}
-bar-used-foreground-2 = ${xrdb:color6:#222}
-bar-used-foreground-3 = ${xrdb:color6:#222}
-bar-used-indicator = 
-#bar-used-indicator-foreground = #ff
-bar-used-fill = ━
-bar-used-fill-font = 2
-bar-used-empty = ━
-bar-used-empty-font = 2
-bar-used-empty-foreground = ${xrdb:color0:#222}
+
