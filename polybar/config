@@ -206,13 +206,7 @@ format-foreground = ${colors.foreground}
 label-empty = "bspwm"
 label-empty-foreground = ${colors.foreground}
 format-padding = 2
-[module/spotify]
-type = custom/script
-interval = 1
-format-prefix = " "
-format = <label>
-exec = python /home/ermanno/.config/scripts/spotify_status.py -f '{artist}: {song}'
-format-underline = #1db954
+
 
 [module/xkeyboard]
 type = internal/xkeyboard
