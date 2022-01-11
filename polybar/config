@@ -29,11 +29,11 @@ alert = #bd2c40
 
 [bar/center]
 ;monitor = ${env:MONITOR:HDMI-1}
-width = 16%
-height = 40
-offset-x = 42%
-offset-y = 0.5%
-radius = 0.0 
+width = 16.58%
+height = 47
+offset-x = 41.7%
+offset-y = 1%
+radius = 0 
 fixed-center = true
 
 background = ${colors.background}
@@ -43,22 +43,22 @@ line-size = 2
 line-color = #00564d
 
 border-size = 0
-border-color = #0D00564d
+border-color = ${xrdb:color6:#222}
 
 padding-left = 1
-padding-right = 1
+padding-right = 0
 
 module-margin-left = 1 
-module-margin-right = 1
+module-margin-right = 0
 
-font-0 = "JetBrainsMono:style=Regular:pixelsize=15;3"
+font-0 = "Iosevka Nerd Font:style=Regular:pixelsize=17;4"
 # font-1 = Font Awesome 5 Brands Regular:style=Regular:pixelsize=12;2
-font-4 = "Material\-Design\-Iconic\-Font:style=Design-Iconic-Font:pixelsize=15;3"
+font-4 = "5aterial\-Design\-Iconic\-Font:style=Design-Iconic-Font:pixelsize=15;3"
 font-2 = unifont:fontformat=truetype:size=14:antialias=false;2
 font-3 = "siji:style=Regular:pixelsize=24;2"
 font-1 = Font Awesome 5 Free:pixelsize=12;2
 font-5 = Font Awesome 5 Free Solid:pixelsize=12;2
-font-6 = Font Awesome 5 Brands:pixelsize=12;2
+font-6 = Font Awesome 5 Brands:pixelsize=15;3
 #font-3= "MaterialIcons:style:Regular:pixelsize=12;2"
 #font-7 = Material Design Iconic Font:style=Design-Iconic-Font:pixelsize=12;2
 modules-left = 
@@ -87,10 +87,10 @@ cursor-scroll = ns-resize
 
 [bar/left]
 ;monitor = ${env:MONITOR:HDMI-1}
-width = 16%
-height = 40
+width = 18.5%
+height = 47
 offset-x = 1%
-offset-y = 0.5%
+offset-y = 1%
 radius = 0.0 
 fixed-center = true
 
@@ -101,27 +101,27 @@ line-size = 2
 line-color = #00564d
 
 border-size = 0
-border-color = #0D00564d
+border-color = ${xrdb:color6:#222}
 
-padding-left = 2
+padding-left = 1
 padding-right = 2
 
 module-margin-left = 2 
 module-margin-right = 2
 
-font-0 = "SF Pro Display:style=Medium:pixelsize=14;3"
-font-1 = Jet Nerd Font:style=Medium:pixelsize=15;3
+font-0 = "SF Pro Display:style=Medium:pixelsize=15;3"
+font-1 = Iosesdfvka Nerd Font:style=Medium:pixelsize=17;4
 font-2 = Font Awesome 5 Solid:pixelsize=14;2
 font-3 = unifont:fontformat=truetype:size=14:antialias=false;2
 font-4 = "siji:style=Regular:pixelsize=24;2"
 font-5 = "Material\-Design\-Iconic\-Font:style=Design-Iconic-Font:pixelsize=15;3"
-font-6 = Font Awesome 5 Free:pixelsize=14;2
+font-6 = Font Awesome 5 Free:pixelsize=15;3
 font-7 = Font Awesome 5 Brands:pixelsize=14;2
 #font-3= "MaterialIcons:style:Regular:pixelsize=12;2"
 #font-7 = Material Design Iconic Font:style=Design-Iconic-Font:pixelsize=12;2
 modules-left = 
-modules-center = date
-modules-right =
+modules-center = date time
+modules-right = 
 
 separator = 
 tray-position = none
@@ -145,9 +145,9 @@ cursor-scroll = ns-resize
 [bar/right]
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 21%
-height = 40
+height = 47
 offset-x = 78%
-offset-y = 0.5%
+offset-y = 1%
 radius = 0.0 
 fixed-center = true
 
@@ -158,7 +158,7 @@ line-size = 2
 line-color = #00564d
 
 border-size = 0
-border-color = #0D00564d
+border-color = ${xrdb:color6:#222}
 
 padding-left = 0
 padding-right = 2
@@ -166,7 +166,7 @@ padding-right = 2
 module-margin-left = 1 
 module-margin-right = 1
 
-font-0 = "JetBrainsMono Nerd Font:style=Regular:pixelsize=17;3"
+font-0 = "Iosevka Nerd Font:style=Regular:pixelsize=17;3"
 # font-1 = Font Awesome 5 Brands Regular:style=Regular:pixelsize=17;2
 font-4 = "Material\-Design\-Iconic\-Font:style=Design-Iconic-Font:pixelsize=15;3"
 font-2 = unifont:fontformat=truetype:size=14:antialias=false;2
@@ -206,7 +206,13 @@ format-foreground = ${colors.foreground}
 label-empty = "bspwm"
 label-empty-foreground = ${colors.foreground}
 format-padding = 2
-
+[module/spotify]
+type = custom/script
+interval = 1
+format-prefix = " "
+format = <label>
+exec = python /home/ermanno/.config/scripts/spotify_status.py -f '{artist}: {song}'
+format-underline = #1db954
 
 [module/xkeyboard]
 type = internal/xkeyboard
@@ -240,21 +246,24 @@ label-unmounted-foreground = ${colors.foreground-alt}
 [module/bspwm]
 type = internal/bspwm
 
-label-focused = ""
-label-focused-foreground = ${colors.foreground}
-;label-focused-background = #383A53
-label-focused-underline = ${colors.foreground}
+label-focused = %icon%
+label-focused-foreground = ${colors.background}
+label-focused-background = ${xrdb:color6:#222}
+#label-focused-underline = ${colors.foreground}
+#label-focused-overline = ${colors.foreground}
 label-focused-padding = 2
 
-label-occupied = ""
+#label-occupied = ""
+label-occupied = %icon% 
 label-occupied-padding = 2
 label-occupied-foreground = ${colors.foreground}
-label-urgent = %index%!
-label-urgent-background = ${colors.alert}
-label-urgent-padding = 2
+#label-urgent = %index%!
+#label-urgent-background = ${colors.alert}
+#label-urgent-padding = 2
 
-label-empty = ""
-label-empty-foreground = ${xrdb:color0:#222}
+#label-empty = ""
+label-empty = %icon%
+label-empty-foreground = ${xrdb:color8:#222}
 label-empty-padding = 2
 #label-empty-foreground = #E8E1D9
 
@@ -262,6 +271,11 @@ label-empty-padding = 2
 ; label-separator = |
 
 
+ws-icon-0 = I;
+ws-icon-1 = II;
+ws-icon-2 = III;爵
+ws-icon-3 = IV;
+ws-icon-4 = V;ﱘ
 
 
 [module/i3]
@@ -417,13 +431,31 @@ time = "         %I:%M %p"
 time-alt = %H:%M:%S
 
 format-prefix = "   " 
-format-prefix-foreground = ${colors.foreground}
+format-prefix-foreground = ${xrdb:color4:#222}
 #format-underline = #F2C3F7
 format-background = 
 format-padding = 2
 
-label = %date% %time%
+label = %date%
 
+[module/time]
+type = internal/date
+interval = 1
+format-foreground = ${colors.foreground}
+
+date = " %Y-%m-%d "
+date-alt = " %Y-%m-%d"
+
+time = "%I:%M %p"
+time-alt = %H:%M:%S
+
+format-prefix = "           " 
+format-prefix-foreground = ${xrdb:color6:#222}
+#format-underline = #F2C3F7
+format-background = 
+format-padding = 2
+
+label = %time%
 [module/pulseaudio]
 type = internal/pulseaudio
 
