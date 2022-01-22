@@ -2,7 +2,10 @@
 My dotfiles for different programs.
 
 # Frost
-![image](https://user-images.githubusercontent.com/72155192/150627711-e0ca6e97-8c6b-457f-92cf-fac621b86180.png)
+![image](https://user-images.githubusercontent.com/72155192/150647013-5edc20ee-7c3d-473b-ab71-5f1fbf72e0d9.png)
+
+# Nord
+![image](https://user-images.githubusercontent.com/72155192/150647072-b7b26912-3a73-4d31-96f9-dd640d37ff02.png)
 
 # Paradise
-![image](https://user-images.githubusercontent.com/72155192/150627795-abb91907-8e52-4bfb-94db-62627dc7f311.png)
+![image](https://user-images.githubusercontent.com/72155192/150647117-9e29c70f-4c5f-4078-a3b0-28a63240f273.png)
