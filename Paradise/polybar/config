@@ -43,7 +43,7 @@ cursor-click = pointer
 cursor-scroll = ns-resize
 
 [bar/left]
-width = 18.5%
+width = 17.5%
 height = 47
 offset-x = 1%
 offset-y = 1%
@@ -59,7 +59,7 @@ border-size = 0
 border-color = ${xrdb:color6:#222}
 
 padding-left = 1
-padding-right = 2
+padding-right = 1
 
 module-margin-left = 2 
 module-margin-right = 2
@@ -81,9 +81,9 @@ cursor-click = pointer
 cursor-scroll = ns-resize
 
 [bar/right]
-width = 21%
+width = 9.5%
 height = 47
-offset-x = 78%
+offset-x = 89.5%
 offset-y = 1%
 fixed-center = true
 
@@ -96,18 +96,17 @@ line-color = #00564d
 border-size = 0
 border-color = ${xrdb:color6:#222}
 
-padding-left = 0
-padding-right = 2
+padding-left = 1
+padding-right = 1
 
 module-margin-left = 1 
 module-margin-right = 1
 
 font-0 = "Iosevka Nerd Font:style=Regular:pixelsize=17;3"
 
-modules-left = alsa
-modules-right = mem2 
+modules-center = alsa
 
-separator = 
+separator = | 
 tray-position = none
 tray-padding = 2
 
@@ -115,6 +114,16 @@ wm-restack = bspwm
 
 cursor-click = pointer
 cursor-scroll = ns-resize
+
+[module/powermenu]
+type = custom/text
+content = 襤
+
+#content-background = ${color.shade2}
+#content-foreground = ${color.foreground}
+content-padding = 2
+
+click-left = frost
 
 [module/bspwm]
 type = internal/bspwm
@@ -135,7 +144,7 @@ label-empty-padding = 2
 ws-icon-0 = I;
 ws-icon-1 = II;
 ws-icon-2 = III;爵
-ws-icon-3 = IV;
+ws-icon-3 = IV;
 ws-icon-4 = V;ﱘ
 
 [module/date]
@@ -146,7 +155,7 @@ format-foreground = ${colors.foreground}
 date = " %Y-%m-%d "
 date-alt = " %Y-%m-%d"
 
-time = "         %I:%M %p"
+time = "    %I:%M %p"
 time-alt = %H:%M:%S
 
 format-prefix = "   " 
@@ -167,7 +176,7 @@ date-alt = " %Y-%m-%d"
 time = "%I:%M %p"
 time-alt = %H:%M:%S
 
-format-prefix = "           " 
+format-prefix = "      " 
 format-prefix-foreground = ${xrdb:color6:#222}
 format-background = 
 format-padding = 2
