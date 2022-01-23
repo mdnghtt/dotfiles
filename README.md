@@ -2,10 +2,10 @@
 My dotfiles for different programs.
 
 # Frost
-![](Frost/frost.png)
+![](https://github.com/midnightxd/dotfiles/blob/main/Frost/frost.png)
 
 # Nord
-![](Nord/nord.png)
+![](https://github.com/midnightxd/dotfiles/blob/main/Nord/nord.png)
 
 # Paradise
-![](Paradise/paradise.png)
+![](https://github.com/midnightxd/dotfiles/blob/main/Paradise/paradise.png)
