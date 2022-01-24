@@ -2,10 +2,10 @@
 My dotfiles for different programs.
 
 # Frost
-![](https://github.com/midnightxd/dotfiles/blob/main/Frost/frost.png)
+![image](https://user-images.githubusercontent.com/72155192/150647013-5edc20ee-7c3d-473b-ab71-5f1fbf72e0d9.png)
 
 # Nord
-![](https://github.com/midnightxd/dotfiles/blob/main/Nord/nord.png)
+![image](https://user-images.githubusercontent.com/72155192/150647072-b7b26912-3a73-4d31-96f9-dd640d37ff02.png)
 
 # Paradise
-![](https://github.com/midnightxd/dotfiles/blob/main/Paradise/paradise.png)
+![image](https://user-images.githubusercontent.com/72155192/150647117-9e29c70f-4c5f-4078-a3b0-28a63240f273.png)

@@ -1,11 +1,12 @@
 #!/bin/sh
-chosen=$(printf "Nord\nEverforest\nParadise\nGruvbox Material\nFrost\n" | rofi -dmenu -p "" -i -theme-str '@import "theme-switcher.rasi"')
+chosen=$(printf "Nord\nEverforest\nParadise\nGruvbox Material\nCatppuccin\nFrost\n" | rofi -dmenu -p "" -i)
 
 case "$chosen" in
   "Nord") nord ;;
   "Everforest") everforest ;;
   "Paradise") paradise ;;
   "Gruvbox Material") gruvbox-mat ;;
+  "Catppuccin") catppuccin ;;
   "Frost") frost ;;
   *) exit 1 ;;
 esac

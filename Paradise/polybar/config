@@ -2,10 +2,64 @@
 
 [colors]
 background = ${xrdb:background:#222}
-foreground = ${xrdb:color7:#222}
+foreground = ${xrdb:foreground:#222}
 primary = #1b9fc6
 secondary = #ffffff
 alert = #bd2c40
+
+[bar/theme]
+width = 3%
+height = 47
+offset-x = 1%
+offset-y = 1%
+fixed-center = true
+
+background = ${xrdb:color6:#222}
+foreground = ${xrdb:background:#222}
+
+padding-left = 0
+padding-right = 0
+
+module-margin-left = 0 
+module-margin-right = 0
+
+font-0 = "Iosevka Nerd Font:style=Regular:pixelsize=15;2"
+modules-center = menu
+
+wm-restack = bspwm
+
+[bar/left]
+width = 17%
+height = 47
+offset-x = 4.5%
+offset-y = 1%
+fixed-center = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 2
+line-color = #00564d
+
+border-size = 0
+border-color = ${xrdb:color6:#222}
+
+padding-left = 1
+padding-right = 1
+
+module-margin-left = 2
+module-margin-right = 2
+
+font-0 = "SF Pro Display:style=Medium:pixelsize=15;3"
+font-1 = Font Awesome 5 Free:pixelsize=15;3
+
+modules-center = date time
+
+wm-restack = bspwm
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
 
 [bar/center]
 width = 16.58%
@@ -33,57 +87,16 @@ font-0 = "Iosevka Nerd Font:style=Regular:pixelsize=17;4"
 
 modules-center = bspwm 
 
-separator = 
-tray-position = none
-tray-padding = 2
-
 wm-restack = bspwm
 
 cursor-click = pointer
 cursor-scroll = ns-resize
 
-[bar/left]
-width = 17.5%
-height = 47
-offset-x = 1%
-offset-y = 1%
-fixed-center = true
-
-background = ${colors.background}
-foreground = ${colors.foreground}
-
-line-size = 2
-line-color = #00564d
-
-border-size = 0
-border-color = ${xrdb:color6:#222}
-
-padding-left = 1
-padding-right = 1
-
-module-margin-left = 2 
-module-margin-right = 2
-
-font-0 = "SF Pro Display:style=Medium:pixelsize=15;3"
-font-1 = Font Awesome 5 Solid:pixelsize=14;2
-font-2 = Font Awesome 5 Free:pixelsize=15;3
-font-3 = Font Awesome 5 Brands:pixelsize=14;2
-
-modules-center = date time
-
-separator = 
-tray-position = none
-tray-padding = 2
-
-wm-restack = bspwm
-
-cursor-click = pointer
-cursor-scroll = ns-resize
 
 [bar/right]
 width = 9.5%
 height = 47
-offset-x = 89.5%
+offset-x = 86%
 offset-y = 1%
 fixed-center = true
 
@@ -106,24 +119,52 @@ font-0 = "Iosevka Nerd Font:style=Regular:pixelsize=17;3"
 
 modules-center = alsa
 
-separator = | 
-tray-position = none
-tray-padding = 2
-
 wm-restack = bspwm
 
 cursor-click = pointer
 cursor-scroll = ns-resize
 
-[module/powermenu]
+[bar/power]
+width = 3%
+height = 47
+offset-x = 96%
+offset-y = 1%
+fixed-center = true
+
+background = ${xrdb:color6:#222}
+foreground = ${xrdb:background:#222}
+
+padding-left = 0
+padding-right = 0
+
+module-margin-left = 0
+module-margin-right = 0
+
+font-0 = "Iosevka Nerd Font:style=Regular:pixelsize=15;2"
+
+modules-center = power
+
+wm-restack = bspwm
+
+[module/menu]
 type = custom/text
-content = 襤
+content = 
 
-#content-background = ${color.shade2}
-#content-foreground = ${color.foreground}
-content-padding = 2
+content-background = ${color.shade2}
+content-foreground = ${color.foreground}
+content-padding = 1
 
-click-left = frost
+click-left = ~/.config/rofi/scripts/theme-switcher &
+
+[module/power]
+type = custom/text
+content = 
+
+content-background = ${color.shade2}
+content-foreground = ${color.foreground}
+content-padding = 1
+
+click-left = ~/.config/rofi/scripts/powermenu &
 
 [module/bspwm]
 type = internal/bspwm
@@ -155,13 +196,10 @@ format-foreground = ${colors.foreground}
 date = " %Y-%m-%d "
 date-alt = " %Y-%m-%d"
 
-time = "    %I:%M %p"
-time-alt = %H:%M:%S
-
 format-prefix = "   " 
 format-prefix-foreground = ${xrdb:color4:#222}
 format-background = 
-format-padding = 2
+format-padding = 1
 
 label = %date%
 
@@ -170,31 +208,15 @@ type = internal/date
 interval = 1
 format-foreground = ${colors.foreground}
 
-date = " %Y-%m-%d "
-date-alt = " %Y-%m-%d"
-
 time = "%I:%M %p"
 time-alt = %H:%M:%S
 
-format-prefix = "      " 
+format-prefix = "    " 
 format-prefix-foreground = ${xrdb:color6:#222}
 format-background = 
-format-padding = 2
+format-padding = 1
 
 label = %time%
-
-[module/pulseaudio]
-type = internal/pulseaudio
-
-format-volume = <label-volume>
-label-volume =  %percentage%%
-label-volume-foreground = #24283b
-label-volume-background = #f7768e
-label-volume-padding = 1
-
-label-muted =  Muted
-label-muted-foreground = #24283b
-label-muted-background = #f7768e
 
 label-muted-padding = 1
 
@@ -206,7 +228,7 @@ label-volume-foreground = ${colors.foreground}
 format-muted-foreground = ${colors.foreground}
 label-muted =" ﳌ  Muted"
 
-format-muted-padding = 1
+format-muted-padding = 2
 
 bar-volume-width = 10
 bar-volume-foreground-0 = ${xrdb:color6:#222}
@@ -227,23 +249,6 @@ bar-volume-empty = "━"
 bar-volume-empty-font = 2
 bar-volume-empty-foreground = ${xrdb:color0:#222}
 format-volume-padding = 2
-
-[module/mem2]
-type = internal/memory
-format = <label> <bar-used>
-label = "" 
-label-padding = 1
-bar-used-width = 10
-bar-used-foreground-0 = ${xrdb:color6:#222}
-bar-used-foreground-1 = ${xrdb:color6:#222}
-bar-used-foreground-2 = ${xrdb:color6:#222}
-bar-used-foreground-3 = ${xrdb:color6:#222}
-bar-used-indicator = 
-bar-used-fill = ━
-bar-used-fill-font = 2
-bar-used-empty = ━
-bar-used-empty-font = 2
-bar-used-empty-foreground = ${xrdb:color0:#222}
 
 [settings]
 screenchange-reload = true
