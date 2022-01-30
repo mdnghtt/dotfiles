@@ -13,12 +13,9 @@ My dotfiles for different programs.
 # Paradise
 ![](Paradise/paradise.png)
 
+[dotfiles]: ```bruh```
+
 <p align="center">
-                         ____           _      _          
-                        (|   \         | | o  | |         
-                         |    | __ _|_ | |    | |  _   ,  
-                        _|    |/  \_|  |/  |  |/  |/  / \_
-                       (/\___/ \__/ |_/|__/|_/|__/|__/ \/ 
-                                       |\                 
-                                       |/              
+    [dotfiles]
 </p>
+      
