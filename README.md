@@ -5,7 +5,7 @@ My dotfiles for different programs.
 ![](Frost/frost.png)
 
 # Tokyo Night Storm
-![](Tokyo Night Storm/tokyo-night-storm.png)
+![](Tokyo%20Night%20Storm/tokyo-night-storm.png)
 
 # Catppuccin
 ![](Catppuccin/catppuccin.png)
