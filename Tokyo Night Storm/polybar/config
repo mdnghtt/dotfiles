@@ -1,0 +1,258 @@
+# Polybar config
+
+
+[colors]
+background = ${xrdb:background:#222}
+foreground = ${xrdb:foreground:#222}
+primary = #1b9fc6
+secondary = #ffffff
+alert = #bd2c40
+
+[bar/theme]
+width = 2.8%
+height = 47
+offset-x = 0.5%
+offset-y = 1%
+fixed-center = true
+
+background = ${xrdb:color6:#222}
+foreground = ${xrdb:background:#222}
+
+padding-left = 0
+padding-right = 0
+
+module-margin-left = 0 
+module-margin-right = 0
+
+font-0 = "Iosevka Nerd Font:style=Regular:pixelsize=15;2"
+modules-center = menu
+
+wm-restack = bspwm
+
+[bar/left]
+width = 17%
+height = 47
+offset-x = 3.8%
+offset-y = 1%
+fixed-center = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 2
+line-color = #00564d
+
+border-size = 0
+border-color = ${xrdb:color6:#222}
+
+padding-left = 1
+padding-right = 1
+
+module-margin-left = 2
+module-margin-right = 2
+
+font-0 = "SF Pro Display:style=Medium:pixelsize=15;3"
+font-1 = Font Awesome 5 Free:pixelsize=15;3
+
+modules-center = date time
+
+wm-restack = bspwm
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+
+[bar/center]
+width = 16.58%
+height = 47
+offset-x = 41.65%
+offset-y = 1%
+fixed-center = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 2
+line-color = #00564d
+
+border-size = 0
+border-color = ${xrdb:color6:#222}
+
+padding-left = 1
+padding-right = 0
+
+module-margin-left = 1 
+module-margin-right = 0
+
+font-0 = "Iosevka Nerd Font:style=Regular:pixelsize=17;4"
+
+modules-center = bspwm 
+
+wm-restack = bspwm
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+
+[bar/right]
+width = 9.5%
+height = 47
+offset-x = 86.7%
+offset-y = 1%
+fixed-center = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 2
+line-color = #00564d
+
+border-size = 0
+border-color = ${xrdb:color6:#222}
+
+padding-left = 1
+padding-right = 1
+
+module-margin-left = 1 
+module-margin-right = 1
+
+font-0 = "Iosevka Nerd Font:style=Regular:pixelsize=17;3"
+
+modules-center = alsa
+
+wm-restack = bspwm
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+[bar/power]
+width = 2.8%
+height = 47
+offset-x = 96.7%
+offset-y = 1%
+fixed-center = true
+
+background = ${xrdb:color6:#222}
+foreground = ${xrdb:background:#222}
+
+padding-left = 0
+padding-right = 0
+
+module-margin-left = 0
+module-margin-right = 0
+
+font-0 = "Iosevka Nerd Font:style=Regular:pixelsize=15;2"
+
+modules-center = power
+
+wm-restack = bspwm
+
+[module/menu]
+type = custom/text
+content = 
+
+content-background = ${color.shade2}
+content-foreground = ${color.foreground}
+content-padding = 1
+
+click-left = ~/.config/rofi/scripts/theme-switcher &
+
+[module/power]
+type = custom/text
+content = 
+
+content-background = ${color.shade2}
+content-foreground = ${color.foreground}
+content-padding = 1
+
+click-left = ~/.config/rofi/scripts/powermenu &
+
+[module/bspwm]
+type = internal/bspwm
+
+label-focused = %icon%
+label-focused-foreground = ${colors.background}
+label-focused-background = ${xrdb:color6:#222}
+label-focused-padding = 2
+
+label-occupied = %icon% 
+label-occupied-padding = 2
+label-occupied-foreground = ${colors.foreground}
+
+label-empty = %icon%
+label-empty-foreground = ${xrdb:color8:#222}
+label-empty-padding = 2
+
+ws-icon-0 = I;
+ws-icon-1 = II;
+ws-icon-2 = III;爵
+ws-icon-3 = IV;
+ws-icon-4 = V;ﱘ
+
+[module/date]
+type = internal/date
+interval = 1
+format-foreground = ${colors.foreground}
+
+date = " %Y-%m-%d "
+date-alt = " %Y-%m-%d"
+
+format-prefix = "   " 
+format-prefix-foreground = ${xrdb:color2:#222}
+format-background = 
+format-padding = 1
+
+label = %date%
+
+[module/time]
+type = internal/date
+interval = 1
+format-foreground = ${colors.foreground}
+time = "%I:%M %p"
+time-alt = %H:%M:%S
+
+format-prefix = "    " 
+format-prefix-foreground = ${xrdb:color6:#222}
+format-padding = 1
+
+label = %time%
+
+label-muted-padding = 1
+[module/alsa]
+type = internal/alsa
+format-volume = <label-volume> <bar-volume>
+label-volume = " "
+label-volume-foreground = ${colors.foreground}
+format-muted-foreground = ${colors.foreground}
+label-muted =" ﳌ  Muted"
+
+format-muted-padding = 2
+
+bar-volume-width = 10
+bar-volume-foreground-0 = ${xrdb:color6:#222}
+bar-volume-foreground-1 = ${xrdb:color6:#222}
+bar-volume-foreground-2 = ${xrdb:color6:#222}
+bar-volume-foreground-3 = ${xrdb:color6:#222}
+bar-volume-foreground-4 = ${xrdb:color6:#222}
+bar-volume-foreground-5 = ${xrdb:color6:#222}
+bar-volume-foreground-6 = ${xrdb:color6:#222}
+bar-volume-gradient = false
+bar-volume-indicator = 
+bar-volume-indicator-foreground = ${xrdb:color6:#222} 
+bar-volume-indicator-font = 2
+bar-volume-fill = "━" 
+bar-volume-fill-foreground = ${xrdb:color6:#222}
+bar-volume-fill-font = 2
+bar-volume-empty = "━"
+bar-volume-empty-font = 2
+bar-volume-empty-foreground = ${xrdb:color8:#222}
+format-volume-padding = 2
+
+[settings]
+screenchange-reload = true
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
+
+; vim:ft=dosini
