@@ -1,0 +1,107 @@
+#
+# wm independent hotkeys
+#
+
+# terminal emulator
+super + Return
+	kitty
+
+# program launcher
+super + @space
+	rofi -show drun
+
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd
+
+#
+# berry hotkeys
+#
+
+super + {h, j, k, l}
+    berryc window_move {-25 0, 0 25, 0 -25, 25 0}
+
+super + shift +  {h, j, k, l}
+    berryc window_resize {-5 0, 0 5, 0 -5, 5 0}
+
+super + {1-5}
+    berryc switch_workspace {1-5}
+
+super + shift + {1-5}
+    berryc send_to_workspace {1-5}
+
+super + m
+    berryc window_monocle
+
+super + f
+    berryc fullscreen
+
+super +  p
+    berryc snap_right
+
+super + o 
+    berryc snap_left
+
+super + n
+    berryc toggle_decorations
+
+super + Tab
+    berryc cycle_focus
+
+super + w
+    berryc window_close
+
+super + c
+    berryc window_center
+
+~button1
+    berryc pointer_focus
+
+super + alt + r
+	restart
+
+# volume keys
+XF86AudioLowerVolume
+	amixer set Master 1%-; voldunst
+XF86AudioRaiseVolume
+	amixer set Master 1%+; voldunst
+XF86AudioMute
+        amixer set Master toggle; voldunst
+
+# lockscreen
+super + x
+	betterlockscreen -l 
+
+# Flameshot
+Print
+	flameshot gui
+
+# Screenshot
+super + Print
+	scrot -e 'xclip -selection clipboard -t image/png -i $f' ~/pix/ss/%b-%d_%I:%M:%S.png && dunstify -a "screenshot" "Screenshot" "Screenshot Saved!"
+
+# Screenshot (rofi)
+
+super + shift + Print
+	scrot -d 2 -e 'xclip -selection clipboard -t image/png -i $f' ~/pix/ss/%b-%d_%I:%M:%S.png && dunstify -a "screenshot" "Screenshot" "Screenshot Saved!"
+
+# View Wallpapers
+
+super + shift + i
+	image
+
+# Theme Switcher (rofi-menu)
+
+super + shift + s
+	$HOME/.config/rofi/scripts/theme-switcher
+
+# Emoji Selector (rofi-menu)
+
+super + shift + e
+	rofi -show emoji
+
+# Powermenu (rofi-menu)
+
+super + shift + q
+	$HOME/.config/rofi/scripts/powermenu
+

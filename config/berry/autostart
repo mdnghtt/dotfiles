@@ -1,0 +1,21 @@
+#!/bin/bash
+
+
+# Set decoration geometry
+berryc border_width       0
+berryc inner_border_width 0
+berryc title_height       40
+berryc edge_gap           100 10 10 10
+# Set decoration colors
+#berryc focus_color         efe6e6
+#berryc unfocus_color       efe6e6 
+berryc inner_focus_color   aac7b3
+berryc inner_unfocus_color aac7b3
+#berryc text_focus_color    ffffff
+#berryc text_unfocus_color  eeeeee
+
+# Other options
+berryc smart_place "true"
+berryc draw_text   "false"
+berryc edge_lock   "false"
+berryc set_font    "Dina-9"
