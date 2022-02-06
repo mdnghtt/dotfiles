@@ -1,0 +1,93 @@
+configuration {
+	modi:				"drun,emoji";
+	font:				"SF Pro Display Medium 12";
+	display-drun: 			"";
+	display-emoji:			"";
+	sidebar-mode: 			false;
+}
+
+* {
+	bg:				#1E1E28;
+	fg:				#DADAE8;
+	button:				#2C2C3A;
+	ac:				#E5B4E2;
+	background-color:		@bg;
+	text-color:			@fg;
+}
+window {
+	transparency:                   "real";
+	border-radius: 0px;
+        width:                          35%;
+	padding: 			0px;
+	border:				0px;
+	border-color:			@fg;
+	location:			center;
+}
+
+prompt {
+	enabled:			true;
+	horizontal-align:		0.5;
+	vertical-align:			0.5;
+	background-color:		@button;
+	border:                         0px;
+	border-color:                   @ac;
+	border-radius: 0px;
+	font:				"Iosevka Nerd Font 20";
+	padding:			0 1% 0;
+}
+
+entry {
+	placeholder:			"Search";
+	expand:                         true;
+	padding:                        2%;
+	background-color:               @button;
+        placeholder-color:              @fg;
+	border:				0px;
+	border-color:			@ac;
+	border-radius: 0px;
+	cursor:				text;
+}
+
+inputbar {
+	children: 			[ prompt, entry ];
+	expand:                         false;
+	spacing:			1%;
+}
+
+listview {
+	columns:                        2;
+	lines:	                        5;
+	cycle:                          false;
+	dynamic:                        true;
+	layout:                         vertical;
+}
+
+mainbox {
+	children:                       [ inputbar, listview ];
+	spacing:                       	2%;
+	padding:                        2% 1% 2% 1%;
+	fixed-num-lines:		false;
+}
+
+element {
+	orientation:                    vertical;
+	border-radius: 0px;
+	padding:			2% 3%;
+}
+
+element-text {
+	expand:                         true;
+	vertical-align:                 0.5;
+	background-color:               inherit;
+        text-color:                     inherit;
+}
+
+element selected {
+	background-color:               @ac;
+	text-color:                     @bg;
+	border-radius: 0px;
+}
+
+listview, element, element selected, element-icon, element-text {
+	cursor:				pointer;
+}

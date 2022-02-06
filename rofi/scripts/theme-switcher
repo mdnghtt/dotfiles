@@ -1,0 +1,16 @@
+#!/bin/sh
+chosen=$(printf "Nord\nEverforest\nParadise\nFrost\nRose Pine Dawn\nFloral\nTokyo Night Storm\nGruvbox Material\nCatppuccin\nAshes\n" | rofi -dmenu -p "" -i)
+
+case "$chosen" in
+  "Nord") nord ;;
+  "Everforest") everforest ;;
+  "Paradise") paradise ;;
+  "Frost") frost ;;
+  "Rose Pine Dawn") rose-pine-dawn ;;
+  "Floral" ) floral ;;
+  "Tokyo Night Storm") tokyo-night-storm ;;
+  "Gruvbox Material") gruvbox-mat ;;
+  "Catppuccin") catppuccin ;;
+  "Ashes" ) ashes ;;
+  *) exit 1 ;;
+esac

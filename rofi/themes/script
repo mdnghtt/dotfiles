@@ -1,0 +1,2 @@
+#!/bin/sh
+sed -i 's|^	border-radius.*|	border-radius: 0px;|' *.rasi

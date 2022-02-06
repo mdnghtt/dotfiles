@@ -1,0 +1,137 @@
+# Polybar config
+
+
+[colors]
+background = ${xrdb:background:#222}
+foreground = ${xrdb:foreground:#222}
+primary = #1b9fc6
+secondary = #ffffff
+alert = #bd2c40
+
+[bar/main]
+width = 99%
+height = 45
+offset-x = 0.5%
+offset-y = 1%
+fixed-center = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 3
+line-color = #00564d
+
+border-size = 10
+border-color = ${xrdb:background:#222}
+
+padding-left = 0
+padding-right = 0
+
+module-margin-left = 1
+module-margin-right = 0
+
+font-0 = "JetBrainsMono:style=Regular:pixelsize=15;3"
+font-1 = "Iosevka Nerd Font:pixelsize=20;4"
+
+modules-left = theme-switcher date time
+modules-center = ws
+modules-right = pulseaudio memory sysmenu
+
+wm-restack = bspwm
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+[module/sysmenu]
+type = custom/text
+content = 襤
+content-background = ${xrdb:color6:#222}
+content-foreground = ${xrdb:background:#222}
+content-padding = 2
+click-left = ~/.config/rofi/scripts/powermenu &
+
+[module/theme-switcher]
+type = custom/text
+content = 
+content-background = ${xrdb:color6:#222}
+content-foreground = ${xrdb:background:#222}
+content-padding = 2
+click-left = ~/.config/rofi/scripts/theme-switcher &
+
+[module/ws]
+type = internal/xworkspaces
+enable-scroll = false
+label-active = %icon% 
+label-active-foreground = ${xrdb:foreground:#222}
+label-active-background = ${xrdb:color0:#222}
+label-active-padding = 3
+
+label-occupied = %icon% 
+label-occupied-padding = 3
+label-occupied-foreground = ${colors.foreground}
+
+label-empty = %icon%
+label-empty-foreground = ${xrdb:color0:#222}
+label-empty-padding = 3
+
+icon-0 = 1;home
+icon-1 = 2;term
+icon-2 = 3;web
+icon-3 = 4;file
+icon-4 = 5;music
+
+[module/date]
+type = internal/date
+interval = 1
+format-foreground = ${colors.foreground}
+
+date = "%a %d/%m"
+
+#format-prefix = " " 
+format-prefix-foreground = ${xrdb:color2:#222}
+format-background = ${xrdb:color0:#222} 
+format-padding = 1
+
+label = %date%
+
+[module/time]
+type = internal/date
+interval = 1
+time = "%I:%M %p"
+time-alt = %H:%M:%S
+
+#format-prefix = " " 
+format-foreground = ${xrdb:background:#222}
+format-background = ${xrdb:color6:#222}
+format-padding = 1
+
+label = %time%
+
+[module/memory]
+type = internal/memory
+interval = 2
+format-foreground = ${xrdb:foreground:#222}
+format-background = ${xrdb:color0:#222}
+label = MEM %percentage_used%%
+format-padding = 1
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+format-volume = <label-volume>
+label-volume = VOL %percentage%%
+label-volume-foreground = ${xrdb:background:#222}
+label-volume-background = ${xrdb:color6:#222}
+label-volume-padding = 1
+
+label-muted = Muted
+label-muted-background = ${xrdb:color1:#222}
+label-muted-foreground = ${xrdb:background:#222}
+label-muted-padding = 1
+
+[settings]
+screenchange-reload = true
+
+[global/wm]
+margin-top = 0
+margin-bottom = 5
+
+; vim:ft=dosini
