@@ -6,5 +6,17 @@
   <img src="https://badges.pufler.dev/visits/mdnght-4/dotfiles?style=for-the-badge&color=9abddd&labelColor=f9f9f9"/>
   </p>
   
-# New Rice Coming Soon
-
+<h1 align="center"> Floral 🌷  </h1>
+  
+![](src/1.png)
+![](src/2.png)
+  
+# Requirements
+- [BerryWM](https://berrywm.org/)
+- [SXHKD](https://github.com/baskerville/sxhkd)
+- [Polybar](https://github.com/polybar/polybar)
+- [Rofi](https://github.com/davatorium/rofi) 
+- [JetBrainsMono](https://www.jetbrains.com/lp/mono/)
+- [Iosevka Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Iosevka) (Better icon rendering than JetBrainsMono Nerd Font)
+- [SF Pro Display](https://github.com/sahibjotsaggu/San-Francisco-Pro-Fonts)
+- [ibhagwan Picom fork](https://github.com/ibhagwan/picom)
