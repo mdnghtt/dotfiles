@@ -1,4 +1,4 @@
-![](dotfiles.png)
+<h1 align="center"> 🌸 Dotfiles 🌸 <h1>
 
 <p align="center"> 
   <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/mdnght-4/dotfiles?color=aac7b3&labelColor=f9f9f9&style=for-the-badge">
