@@ -1,8 +1,0 @@
-#!/bin/sh
-
-while read file
-do
- case "$1" in
-   "w") setbg $file ;;
- esac
-done
