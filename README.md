@@ -21,3 +21,10 @@
 - [Iosevka Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Iosevka) (Better icon rendering than JetBrainsMono Nerd Font)
 - [SF Pro Display](https://github.com/sahibjotsaggu/San-Francisco-Pro-Fonts)
 - [ibhagwan Picom fork](https://github.com/ibhagwan/picom)
+  
+# Stuff in the images
+- [Fetch](https://github.com/smartsyncing/dotfiles/blob/main/zsh/autostart)
+- [Panes](https://github.com/stark/Color-Scripts/blob/master/color-scripts/panes)
+- [Nautilus](https://github.com/GNOME/nautilus)
+- [Rofi](https://github.com/davatorium/rofi)
+- [Cava](https://github.com/karlstav/cava)
