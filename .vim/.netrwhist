@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/home/midnight/.vim'
+let g:netrw_dirhist_2='/home/midnight/.config/polybar'
+let g:netrw_dirhist_1='/home/midnight/.config/kitty'
+let g:netrw_dirhist_0='/home/midnight/.vim'
+let g:netrw_dirhist_9='/home/midnight/.config/kitty'
+let g:netrw_dirhist_8='/home/midnight/.config/rofi/scripts'
+let g:netrw_dirhist_7='/home/midnight/.local/bin'
+let g:netrw_dirhist_6='/home/midnight/.cache/wal/schemes'
+let g:netrw_dirhist_5='/home/midnight/code/live-rl/scripts'
+let g:netrw_dirhist_4='/home/midnight/code/live-rl/wallpapers/gruvbox-mat'
