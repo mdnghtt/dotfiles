@@ -27,6 +27,6 @@ export PATH="$SPICETIFY_INSTALL:$PATH"
 export PF_INFO="ascii title os de host kernel shell uptime memory editor palette"
 
 # extensions
-source /home/$USER/github/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/github/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/github/zsh-autosuggestions/zsh-autosuggestions.zsh
 
