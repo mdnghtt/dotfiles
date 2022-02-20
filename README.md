@@ -10,7 +10,6 @@
   
 
 ![](src/1.png)
-![](src/2.png)
   
 # Requirements
 - [BerryWM](https://berrywm.org/)
@@ -26,5 +25,4 @@
 - [Fetch](https://github.com/smartsyncing/dotfiles/blob/main/zsh/autostart)
 - [Panes](https://github.com/stark/Color-Scripts/blob/master/color-scripts/panes)
 - [Nautilus](https://github.com/GNOME/nautilus)
-- [Rofi](https://github.com/davatorium/rofi)
-- [Cava](https://github.com/karlstav/cava)
+
