@@ -9,7 +9,7 @@
 <h1 align="center"> Floral 🌷  </h1>
   
 
-![](src/1.png)
+![](Floral/src/1.png)
   
 # Requirements
 - [BerryWM](https://berrywm.org/)
@@ -27,4 +27,11 @@
 - [Nautilus](https://github.com/GNOME/nautilus)
 
 ---
+<h1 align="center"> Mountain 🗻 </h1>
 
+
+![](Mountain/src/mountain.jpg)
+
+# Requirements
+
+# Stuff in the image
