@@ -21,7 +21,7 @@
 - [SF Pro Display](https://github.com/sahibjotsaggu/San-Francisco-Pro-Fonts)
 - [ibhagwan Picom fork](https://github.com/ibhagwan/picom)
   
-# Stuff in the images
+# Stuff in the image
 - [Fetch](https://github.com/smartsyncing/dotfiles/blob/main/zsh/autostart)
 - [Panes](https://github.com/stark/Color-Scripts/blob/master/color-scripts/panes)
 - [Nautilus](https://github.com/GNOME/nautilus)
