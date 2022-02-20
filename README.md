@@ -13,6 +13,7 @@
   
 # Requirements
 - [BerryWM](https://berrywm.org/)
+- [Kitty](https://sw.kovidgoyal.net/kitty/)
 - [SXHKD](https://github.com/baskerville/sxhkd)
 - [Polybar](https://github.com/polybar/polybar)
 - [Rofi](https://github.com/davatorium/rofi) 
@@ -30,8 +31,14 @@
 <h1 align="center"> Mountain 🗻 </h1>
 
 
-![](Mountain/src/mountain.jpg)
+![](Mountain/src/mountain.png)
 
 # Requirements
-
-# Stuff in the image
+- [BSPWM](https://github.com/baskerville/bspwm)
+- [URXVT](https://sw.kovidgoyal.net/kitty/)
+- [SXHKD](https://github.com/baskerville/sxhkd)
+- [Polybar](https://github.com/polybar/polybar)
+- [Rofi](https://github.com/davatorium/rofi)
+- [Terminus](http://terminus-font.sourceforge.net/)
+- [ibhagwan Picom fork](https://github.com/ibhagwan/picom)
+  
