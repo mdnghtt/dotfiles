@@ -26,3 +26,5 @@
 - [Panes](https://github.com/stark/Color-Scripts/blob/master/color-scripts/panes)
 - [Nautilus](https://github.com/GNOME/nautilus)
 
+---
+
