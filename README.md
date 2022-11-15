@@ -1,5 +1,7 @@
 <h1 align="center"> 🌸 Dotfiles 🌸 <h1>
-  
+
+<p align=center> cool shit </p>
+
 <h1 align="center"> Floral 🌷  </h1>
   
 
